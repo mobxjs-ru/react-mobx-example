@@ -1,8 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Пример связки React + MobX
 
-## Getting Started
+Данное приложение - пример того как можно реализовать модель данных и слой бизнес-логики отдельно от UI (насколько это возможно).
 
-First, run the development server:
+В качестве примера приведена простая форма регистрации с псевдо-вызовом API и псевдо-нотификацией.
+
+## Мотивация
+Целью данного примера является демонстрация возможностей различных реализаций стора в связке с React, формирования слоев (Бизнес Логика <---> UI), различных небольших конструкций вроде `reactionsExtender`, позволяющих сильно упростить жизнь разработчика.
+
+**ВАЖНО ПОМНИТЬ!** Это не универсальный гайд, и в более сложном проекте могут потребоваться дополнительные/иные структуры данных и абстракций для решения тех или иных задач.
+
+## Перед началом
+
+Установите зависимости
+```bash
+npm i
+```
+
+Запустите сервер next.js 
 
 ```bash
 npm run dev
@@ -12,27 +26,10 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+В данном примере для удобства используется фреймворк Next.js, так что если заходите расширить возможности данного демо - обратитесь к [документации](https://nextjs.org/docs)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Важно знать
+В данном примере некоторые механизмы (например, формы и их создание) сильно упрощены, чтобы основной акцент оставался на особенностях имплементации MobX - состояний, изменений, реакций и т.д.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
